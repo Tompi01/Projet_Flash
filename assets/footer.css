@@ -1,0 +1,41 @@
+footer {
+    height: auto;
+    background-color:rgb(14,11,38);
+    width: 100%;
+    bottom: 0;
+    right: 0 ;
+    left: 0;
+
+}
+.orange{
+    color:#FF8533;
+    font-weight:bold;
+
+}
+footer p{
+    color: white;
+}
+footer h2{
+    color: white;
+}
+footer div{
+    color: white;
+}
+.conteneur {
+    display: flex; 
+    justify-content: space-between; 
+}
+.d-flex{
+    display: flex;
+    justify-content: space-around;
+}
+h2{
+    font-weight:bold;
+}
+.orangep{
+    font-size: 40px;
+    color:#FF8533;
+}
+h6{
+    font-size: 15px;
+}
