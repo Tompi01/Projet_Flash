@@ -1,0 +1,39 @@
+.wrapper{
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+p {
+	font-family: "Gill Sans", sans-serif;
+	font-size:17px; 
+	color:#e30a0a;
+}
+.id1 {
+    padding-left: 100px;
+    flex: calc(100% /3);
+}
+
+li {
+    list-style: none;
+
+}
+a {
+    text-decoration: none;
+}
+
+.id2 ul {
+    display: inline-flex;
+}
+a{
+	text-decoration: none;
+	color: #444
+}
+.id2{
+    flex: 150px;
+    font-family: "Gill Sans", sans-serif;
+	font-size:17px; 
+	color:#444;
+}
+.id2 ul li {
+    margin-left: 20px;
+}
