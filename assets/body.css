@@ -297,12 +297,43 @@ section.container2 {
   }
   
   section.container2 p.logo {
+    display: flex;
+    align-items: center;
     font-size: 20px;
   }
 
 
 
+/*  LOGO */
 
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #ffffff;
+    color: rgb(12, 11, 34);
+  }
+  
+  .fa-twitter {
+    background: #ffffff;
+    color: rgb(12, 11, 34);
+  }
+  
+  .fa-pinterest {
+    background: #ffffff;
+    color: rgb(12, 11, 34);
+  }
 
   
 
