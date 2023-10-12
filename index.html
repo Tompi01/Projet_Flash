@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/body.css">
     <link rel="stylesheet" href="assets/footer.css">
     <link rel="stylesheet" href="assets/header.css">
+    <link rel="stylesheet" href="assets/chat.css">
     <title>Projet Flash</title>
 </head>
 
@@ -16,6 +17,62 @@
 
 
 <body>
+
+    <!-------------------------------------------CHAT---------------------------------------------------->
+    <div class="chat-container">
+        <div class="chat-header">
+            Messagerie
+        </div>
+        <div class="chat-messages">
+
+            <div class="message">
+                <div class="message-sender">Temayoo</div>
+                <div class="message-content">Salut ! Comment ça va ?</div>
+                <div class="message-statu">Aujourd'hui à <strong>15h16</strong> vu  </div>
+            </div>
+            <div class="message">
+                <div class="message-sender2">Tom</div>
+                <div class="message-content2">Ça va bien, merci  et toi ?</div>
+                <div class="message-statu2">Aujourd'hui à <strong>15h18</strong> vu   </div>
+            </div>
+            <div class="message">
+                <div class="message-sender">Temayoo</div>
+                <div class="message-content"> Très bien aussi, tu fais quoi ?</div>
+                <div class="message-statu">Aujourd'hui à <strong>15h22</strong>  vu  </div>
+            </div>
+
+            <div class="message">
+                <div class="message-sender2">Tom</div>
+                <div class="message-content2">Je joue à League of Legend et toi ? </div>
+                <div class="message-statu2">Aujourd'hui à <strong>15h24</strong>  vu  </div>
+            </div>
+
+            <div class="message">
+                <div class="message-sender">Temayoo</div>
+                <div class="message-content"> je fais une partie de memory, il est trop bien ! </div>
+                <div class="message-statu">Aujourd'hui à <strong>15h26</strong> vu </div>
+            </div>
+
+            <div class="message">
+                <div class="message-sender2"> Tom </div>
+                <div class="message-content2">Salut ça va Aurelien  </div>
+                <div class="message-statu2">Aujourd'hui à <strong>15h28</strong>  vu  </div>
+            </div>
+
+            <div class="message">
+                <div class="message-sender2"> Aurelien </div>
+                <div class="message-content2">Nickel et toi Tom ?  </div>
+                <div class="message-statu2">Aujourd'hui à <strong>15h30</strong>  remis  </div>
+            </div>
+
+            </div>
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Saisissez votre message...">
+            <button id="send-button">Envoyer</button>
+        </div>
+    </div>
+   
+      <!-------------------------------------------FIN CHAT---------------------------------------------------->
    
       
 <header>
@@ -28,25 +85,25 @@
 				<nav>
 					<ul>
 						<li>
-							 <a href="">ACCUEIL</a>
+							 <a href="index.html">ACCUEIL</a>
 						</li>
 						<li>
-							 <a href="">JEU</a>
+							 <a href="chooseTheme.html">JEU</a>
 						</li>
 						<li>
-							 <a href="">SCORES</a>
+							 <a href="scores.html">SCORES</a>
 						</li>
 						<li>
-							 <a href="">NOUS CONTACTER</a>
+							 <a href="contact.html">NOUS CONTACTER</a>
 						</li>
                         <li>
-                            <a href="">SE CONNECTER</a>
+                            <a href="login.html">SE CONNECTER</a>
                         </li>
                         <li>
-                        <a href="">S'INSCRIRE</a>
+                        <a href="register.html">S'INSCRIRE</a>
                         </li>
                         <li>
-                            <a href="">MON PROFIL</a>
+                            <a href="myAccount.html">MON PROFIL</a>
                         </li>
 					</ul>
 				</nav>		
@@ -76,7 +133,7 @@
 
                     <br> <br>
 
-                    <a class="jouer-text" href="game1.html">Jouer !</a>                      
+                    <a class="jouer-text" href="chooseTheme.html">Jouer !</a>                      
         </div>
     </div>
 
@@ -203,7 +260,7 @@
               <h2 class="title">HAMILTON</h2>
               <p class="text-equipe"> Games Developer </p>
       
-              <p class="logo"><a href="https://facebook.com"> Facebook</a><a href="https://twitter.com"> 🐦 </a><a href="https://pinterest.fr">Pinterest</a></p>
+              <p class="logo"><a href="https://facebook.com" class="fa fa-facebook"></a><a href="https://twitter.com/" class="fa fa-twitter"></a><a href="https://www.pinterest.fr/" class="fa fa-pinterest"></a></p>
             </div>
       
             <div class="item-equipe">
@@ -211,7 +268,7 @@
               <h2 class="title">MARION</h2>
               <p class="text-equipe">Game Designer</p>
       
-              <p class="logo"><a href="https://facebook.com"> Facebook </a><a href="https://twitter.com"> 🐦 </a><a href="https://pinterest.fr">Pinterest</a></p>
+              <p class="logo"><a href="https://facebook.com" class="fa fa-facebook"></a><a href="https://twitter.com/" class="fa fa-twitter"></a><a href="https://www.pinterest.fr/" class="fa fa-pinterest"></a></p>
             </div>
       
             <div class="item-equipe">
@@ -219,7 +276,7 @@
               <h2 class="title"> ARNOLD</h2>
               <p class="text-equipe">Game Developer</p>
       
-              <p class="logo"><a href="https://facebook.com"> Facebook </a><a href="https://twitter.com"> 🐦 </a><a href="https://pinterest.fr">Pinterest</a></p>
+              <p class="logo"><a href="https://facebook.com" class="fa fa-facebook"></a><a href="https://twitter.com/" class="fa fa-twitter"></a><a href="https://www.pinterest.fr/" class="fa fa-pinterest"></a></p>
 
 
             </div>
@@ -261,9 +318,9 @@
         </div>
         <div class="wrrapper">
             <h2 class="droits">Power of memory</h2>
-            <p><span class="orangep">.</span>  Jouer !</p>
-            <p><span class="orangep">.</span>  Les Scores</p>
-            <p><span class="orangep">.</span>  Nous conctater</p>
+            <p><span class="orangep">.</span>  <a href="chooseTheme.html">Jouer !</a> </p>
+            <p><span class="orangep">.</span> <a href="scores.html">Les Scores</a> </p>
+            <p><span class="orangep">.</span>  <a href="scores.html">Nous Contacter</a> </p>
         </div>
     </section>
 </footer>
