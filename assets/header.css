@@ -7,10 +7,11 @@ p {
 	font-family: "Gill Sans", sans-serif;
 	font-size:17px; 
 	color:white;
+
 }
 .id1 {
     padding-left: 100px;
-    flex: calc(100% /3);
+    flex: calc(100%/9);
 }
 
 li {
@@ -29,11 +30,14 @@ a{
 	color: white
 }
 .id2{
-    flex: 150px;
+    flex: 30%;
     font-family: "Gill Sans", sans-serif;
-	font-size:17px; 
+	font-size:15px; 
 	color:white;
 }
 .id2 ul li {
-    margin-left: 20px;
+    margin-left: 30px;
+}
+.id2 ul li :hover{
+    color: orange;
 }
