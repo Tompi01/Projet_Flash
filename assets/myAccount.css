@@ -38,3 +38,13 @@ html, body {
     color: white;
     border-radius: 2px;
 }
+
+
+.d-flex1{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 50px;
+    
+}

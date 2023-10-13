@@ -14,9 +14,11 @@ footer {
 }
 footer p{
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 footer h2{
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 footer div{
     color: white;
@@ -31,6 +33,7 @@ footer div{
 }
 h2{
     font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .orangep{
     font-size: 40px;
@@ -38,6 +41,7 @@ h2{
 }
 h6{
     font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .image1{
     height: 30px;

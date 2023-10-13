@@ -11,6 +11,7 @@ form{
     justify-content: center;
     background-color: rgba(15,14,36,0.99);
     height: 375px;
+
 }
 .banner{
     display: flex;
