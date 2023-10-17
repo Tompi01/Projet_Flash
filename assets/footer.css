@@ -1,45 +1,46 @@
-footer {
+.foo {
     height: auto;
-    background-color:rgb(14,11,38);
+    background-color:rgb(12,11,36);
     width: 100%;
     bottom: 0;
     right: 0 ;
     left: 0;
+    margin-top: 50px;
 
 }
-.orange{
+.foo .orange{
     color:#FF8533;
     font-weight:bold;
 
 }
-footer p{
+.foo p{
     color: white;
 }
-footer h2{
+.foo  h2{
     color: white;
 }
-footer div{
+.foo  div{
     color: white;
 }
-.conteneur {
+.foo .conteneur {
     display: flex; 
     justify-content: space-between; 
 }
-.d-flex{
+.foo .d-flex{
     display: flex;
     justify-content: space-around;
 }
-h2{
+.foo h2{
     font-weight:bold;
 }
-.orangep{
+.foo .orangep{
     font-size: 40px;
     color:#FF8533;
 }
-h6{
+.foo h6{
     font-size: 15px;
 }
-.image1{
+.foo .image1{
     height: 30px;
     width: 30px;
 }
