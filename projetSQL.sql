@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS utilisateur (
     PRIMARY KEY(id)
 )
 
-CHARACTER SET 'utf8';
+CHARACTER SET 'utf8',
 ENGINE = INNODB;
 
 
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS score (
     PRIMARY KEY(id)
 )
 
-CHARACTER SET 'utf8';
+CHARACTER SET 'utf8',
 ENGINE = INNODB;
 
 /* ------------   FIN TABLE DE SCORE ----------*/
@@ -63,12 +63,12 @@ CREATE TABLE IF NOT EXISTS message (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     id_jeu INT UNSIGNED NOT NULL,
     id_expediteur INT UNSIGNED NOT NULL,
-    message TEXT NOT NULL,
+    messages TEXT NOT NULL,
     date_heure_message DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id)
 )
 
-CHARACTER SET 'utf8';
+CHARACTER SET 'utf8',
 ENGINE = INNODB;
 
 /* ------------   FIN TABLE DE Message ----------*/
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS jeu (
     PRIMARY KEY(id)
 )
 
-CHARACTER SET 'utf8';
+CHARACTER SET 'utf8',
 ENGINE = INNODB;
 
 /* ------------   FIN TABLE DE JEU ----------*/
@@ -102,19 +102,19 @@ ENGINE = INNODB;
 
 --- Score --- 
 ALTER TABLE score
-ADD CONSTRAINT fk_score_utilisateur FOREIGN KEY (id_joueur) REFERENCES utilisateur(id) ON DELETE CASCADE;
+ADD CONSTRAINT fk_score_utilisateur FOREIGN KEY (id_joueur) REFERENCES utilisateur(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE score
-ADD CONSTRAINT fk_score_jeu FOREIGN KEY (id_jeu) REFERENCES jeu(id) ON DELETE CASCADE;
+ADD CONSTRAINT fk_score_jeu FOREIGN KEY (id_jeu) REFERENCES jeu(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
 --- Message ---
 
 ALTER TABLE message
-ADD CONSTRAINT fk_message_jeu FOREIGN KEY (id_jeu) REFERENCES jeu(id) ON DELETE CASCADE;
+ADD CONSTRAINT fk_message_jeu FOREIGN KEY (id_jeu) REFERENCES jeu(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE message
-ADD CONSTRAINT fk_message_utilisateur FOREIGN KEY (id_expediteur) REFERENCES utilisateur(id) ON DELETE CASCADE;
+ADD CONSTRAINT fk_message_utilisateur FOREIGN KEY (id_expediteur) REFERENCES utilisateur(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
 /* ------------   FIN Clé Etrangeres  ----------*/
@@ -144,6 +144,11 @@ VALUES ('truc@gmail.com','pokemon','pika','2013-06-07 22:16:43.666', '2013-06-07
 
 
 
+         /*---------------    Creation donnés Jeu   --------------*/
+            INSERT INTO jeu(nom_jeu)
+            VALUES('Power of Memory');
+
+         /*---------------    FIN Creation donnés Jeu   --------------*/
 
 
 
@@ -175,7 +180,7 @@ VALUES (1,1,'Level III','4000','2019-02-07 22:16:43'),
 
 
         /*---------------     Creation donnés Message   --------------*/
-         INSERT INTO message(id_jeu,id_expediteur,message,date_heure_message)
+         INSERT INTO message(id_jeu,id_expediteur,messages,date_heure_message)
 VALUES  (1,2,"a",'2013-06-05 22:16:43'),
         (1,2,"b",'2013-06-06 22:16:43'),
         (1,3,"c",'2013-06-07 22:16:43'),
@@ -206,13 +211,6 @@ VALUES  (1,2,"a",'2013-06-05 22:16:43'),
         /*---------------     FIN Creation donnés Message   --------------*/
 
 
-
-
-         /*---------------    Creation donnés Jeu   --------------*/
-            INSERT INTO jeu(nom_jeu)
-            VALUES('Power of Memory');
-
-         /*---------------    FIN Creation donnés Jeu   --------------*/
 
 
         /*----------------  Creation profil Story 3 ------------------*/
@@ -259,7 +257,7 @@ VALUES  (1,2,"a",'2013-06-05 22:16:43'),
         FROM score
         INNER JOIN jeu ON score.id_jeu = jeu.id
         INNER JOIN utilisateur ON score.id_joueur = utilisateur.id
-        ORDER BY jeu.nom_jeu, difficulte ASC, score ASC;
+        ORDER BY jeu.nom_jeu, difficulte ASC, score_jeu ASC;
 
 
         /*----------------  FIN Creation  Story 7 ------------------*/
@@ -314,7 +312,7 @@ VALUES  (1,2,"a",'2013-06-05 22:16:43'),
 
         /*----------------  Creation  Story 10 ------------------*/
 
-        INSERT INTO message(id_jeu,id_expediteur,message,date_heure_message)
+        INSERT INTO message(id_jeu,id_expediteur,messages,date_heure_message)
         VALUES  (1,4,"yo",'2016-06-05 22:16:43');
 
 
@@ -329,7 +327,7 @@ VALUES  (1,2,"a",'2013-06-05 22:16:43'),
 
 
                     -- si aucune donné c'est qu'il n'y a pas eu de message dans les dernieres 24h --
-        SELECT message, pseudo, date_heure_message, utilisateur.id = 3 as isSender
+        SELECT messages, pseudo, date_heure_message, utilisateur.id = 3 as isSender
         FROM message
         INNER JOIN utilisateur ON message.id_expediteur = utilisateur.id
         WHERE date_heure_message >= NOW() - INTERVAL 1 DAY;
@@ -342,7 +340,7 @@ VALUES  (1,2,"a",'2013-06-05 22:16:43'),
 
         /*----------------   Creation  Story 12 ------------------*/
 
-        SELECT *
+        SELECT score.*, utilisateur.pseudo
         FROM score
         INNER JOIN utilisateur ON score.id_joueur = utilisateur.id
         WHERE utilisateur.pseudo LIKE "%i%";
