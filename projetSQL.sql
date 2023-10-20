@@ -257,7 +257,7 @@ VALUES  (1,2,"a",'2013-06-05 22:16:43'),
         FROM score
         INNER JOIN jeu ON score.id_jeu = jeu.id
         INNER JOIN utilisateur ON score.id_joueur = utilisateur.id
-        ORDER BY jeu.nom_jeu, difficulte ASC, score_jeu ASC;
+        ORDER BY jeu.nom_jeu ASC, difficulte ASC, score_jeu ASC;
 
 
         /*----------------  FIN Creation  Story 7 ------------------*/
@@ -294,7 +294,7 @@ VALUES  (1,2,"a",'2013-06-05 22:16:43'),
 
             SELECT id_score, id_jeu, difficulte
             FROM score
-            WHERE id_joueur = "id joueur gagnant"
+            WHERE id_joueur = "id_joueur_gagnant"
 
             /* -- Si le SELECT ne renvoie rien ( n'a pas de parti deja faite) --*/
             INSERT INTO score (id_joueur,id_jeu,difficulte,score_jeu)
@@ -303,7 +303,7 @@ VALUES  (1,2,"a",'2013-06-05 22:16:43'),
             /* -- Si le SELECT  renvoie quelque chose on met a jour son score --*/
             UPDATE score 
             SET score_jeu = "nouveau_score"
-            WHERE id = "id_score" 
+            WHERE id_joueur = "id_joueur_gagnant" 
 
 
         /*----------------  FIN Creation  Story 9 ------------------*/
@@ -327,7 +327,7 @@ VALUES  (1,2,"a",'2013-06-05 22:16:43'),
 
 
                     -- si aucune donné c'est qu'il n'y a pas eu de message dans les dernieres 24h --
-        SELECT messages, pseudo, date_heure_message, utilisateur.id = 3 as isSender
+        SELECT messages, pseudo, date_heure_message, utilisateur.id = 3 AS isSender
         FROM message
         INNER JOIN utilisateur ON message.id_expediteur = utilisateur.id
         WHERE date_heure_message >= NOW() - INTERVAL 1 DAY;
