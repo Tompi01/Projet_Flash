@@ -15,18 +15,18 @@
                 <br>
                 <p><span class="orange">Location :</span> Paris</p>
                 <br>
-                <a href="https://facebook.com"><img src="<?php PROJECT_FOLDER ?> assets/facebook2.png" alt="facebook" class="image1"></a>
-                <a href="https://twitter.com"><img src="<?php PROJECT_FOLDER ?> assets/tweeter2.png" alt="twitter" class="image1"></a>
-                <a href="https://google.com"><img src="<?php PROJECT_FOLDER ?> assets/google2.png" alt="google" class="image1"></a>
-                <a href="https://pinterest.fr"><img src="<?php PROJECT_FOLDER ?> assets/pinterest2.png" alt="pinterest" class="image1"></a>
-                <a href="https://instagram.com"><img src="<?php PROJECT_FOLDER ?> assets/instagram2.png" alt="instagram" class="image1"></a>
+                <a href="https://facebook.com"><img src="<?=PROJECT_FOLDER ?>assets/facebook2.png" alt="facebook" class="image1"></a>
+                <a href="https://twitter.com"><img src="<?=PROJECT_FOLDER ?>assets/tweeter2.png" alt="twitter" class="image1"></a>
+                <a href="https://google.com"><img src="<?=PROJECT_FOLDER ?>assets/google2.png" alt="google" class="image1"></a>
+                <a href="https://pinterest.fr"><img src="<?=PROJECT_FOLDER ?>assets/pinterest2.png" alt="pinterest" class="image1"></a>
+                <a href="https://instagram.com"><img src="<?=PROJECT_FOLDER ?>assets/instagram2.png" alt="instagram" class="image1"></a>
                 <div class="copyright">Copyright © 2022 Tous droits réservés.</div>
             </div>
             <div class="wrrapper">
                 <h2 class="droits">Power of memory</h2>
-                <p><span class="orangep">.</span>  <a href="chooseTheme.html">Jouer !</a> </p>
-                <p><span class="orangep">.</span> <a href="scores.html">Les Scores</a> </p>
-                <p><span class="orangep">.</span>  <a href="contact.html">Nous Contacter</a> </p>
+                <p><span class="orangep">.</span>  <a href="chooseTheme.php">Jouer !</a> </p>
+                <p><span class="orangep">.</span> <a href="scores.php">Les Scores</a> </p>
+                <p><span class="orangep">.</span>  <a href="contact.php">Nous Contacter</a> </p>
             </div>
         </section>
     </footer>

@@ -19,7 +19,7 @@ $pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC L
     <body>
         <div class="container">
 
-            <img class="image" src="<?php PROJECT_FOLDER ?> assets/pictureMain1.jpeg" alt="Image">
+            <img class="image" src="<?=PROJECT_FOLDER ?>assets/pictureMain1.jpeg" alt="Image">
 
             
 
@@ -31,7 +31,7 @@ $pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC L
 
                 <br> <br>
 
-                <a class="jouer-text" href="chooseTheme.html">Jouer !</a>
+                <a class="jouer-text" href="<?=PROJECT_FOLDER ?>games/memory/index1.php">Jouer !</a>
             </div>
         </div>
 
@@ -43,17 +43,17 @@ $pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC L
         <div class="games3">
 
             <div class="image-games3">
-                <img src="<?php PROJECT_FOLDER ?> assets/OrdinateurNeon.png" alt="Image 1">
+                <img src="<?=PROJECT_FOLDER ?>assets/OrdinateurNeon.png" alt="Image 1">
 
             </div>
 
             <div class="image-games3">
-                <img src="<?php PROJECT_FOLDER ?> assets/trotinette.png" alt="Image 2">
+                <img src="<?=PROJECT_FOLDER ?>assets/trotinette.png" alt="Image 2">
 
             </div>
 
             <div class="image-games3">
-                <img src="<?php PROJECT_FOLDER ?> assets/pokerpicture.jpeg" alt="Image 3">
+                <img src="<?=PROJECT_FOLDER ?>assets/pokerpicture.jpeg" alt="Image 3">
 
             </div>
 
@@ -99,7 +99,7 @@ $pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC L
         <div id="carre">
 
             <div class="imag">
-                <img src="<?php PROJECT_FOLDER ?> assets/WatchDog.png" alt="Image 4">
+                <img src="<?=PROJECT_FOLDER ?>assets/WatchDog.png" alt="Image 4">
             </div>
 
 
@@ -140,7 +140,7 @@ $pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC L
         <div class="transition">
             <span class="equipe">Notre Equipe</span>
             <p>Quisque commodo facilisis Durus. terouum volutnat arcu viverra s</p>
-            <img src="<?php PROJECT_FOLDER ?> assets/transition-jaune.jpg">
+            <img src="<?=PROJECT_FOLDER ?>assets/transition-jaune.jpg">
 
         </div>
 
@@ -154,7 +154,7 @@ $pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC L
         <section class="container2">
 
             <div class="item-equipe">
-                <img src="<?php PROJECT_FOLDER ?> assets/Hamilton.jpeg" alt="Image 5">
+                <img src="<?=PROJECT_FOLDER ?>assets/Hamilton.jpeg" alt="Image 5">
                 <h2 class="title">HAMILTON</h2>
                 <p class="text-equipe"> Games Developer </p>
 
@@ -162,7 +162,7 @@ $pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC L
             </div>
 
             <div class="item-equipe">
-                <img src="<?php PROJECT_FOLDER ?> assets/Marion.jpeg" alt="Image 6">
+                <img src="<?=PROJECT_FOLDER ?>assets/Marion.jpeg" alt="Image 6">
                 <h2 class="title">MARION</h2>
                 <p class="text-equipe">Game Designer</p>
 
@@ -170,7 +170,7 @@ $pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC L
             </div>
 
             <div class="item-equipe">
-                <img src="<?php PROJECT_FOLDER ?> assets/picArnold.jpeg" alt="Image 4">
+                <img src="<?=PROJECT_FOLDER ?>assets/picArnold.jpeg" alt="Image 4">
                 <h2 class="title"> ARNOLD</h2>
                 <p class="text-equipe">Game Developer</p>
 

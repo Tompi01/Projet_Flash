@@ -26,9 +26,9 @@ require_once SITE_ROOT. 'partials/header.php';
 
     <!-------------------------------------------DIFFERENT LEVEL---------------------------------------------------->
     <div class="different-level">
-        <div class="level1"><p><a href="chooseTheme.html"><strong>THEME</strong></a></p></div>
-        <div class="level2"><p><a href="memory2T1.html"><strong>LEVEL II</strong></a></p></div>
-        <div class="level3"><p><a href="memory3T1.html"><strong>LEVEL III</strong></a></p></div>
+        <div class="level1"><p><a href="chooseTheme.php"><strong>THEME</strong></a></p></div>
+        <div class="level2"><p><a href="memory2T1.php"><strong>LEVEL II</strong></a></p></div>
+        <div class="level3"><p><a href="memory3T1.php"><strong>LEVEL III</strong></a></p></div>
     </div>
     <!-------------------------------------------FIN DIFFERENT LEVEL ---------------------------------------------------->
 
@@ -47,28 +47,28 @@ require_once SITE_ROOT. 'partials/header.php';
     <table class="card-memory">
         
         <tr>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
         </tr>
         <tr>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
         </tr>
         <tr>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
         </tr>
         <tr>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
-            <td><img src="<?php PROJECT_FOLDER ?> assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
+            <td><img src="<?=PROJECT_FOLDER ?>assets/carte.jpg"></td>
         </tr>
 
 

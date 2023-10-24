@@ -23,7 +23,7 @@ require_once SITE_ROOT. 'partials/header.php';
                 <input type="password" placeholder="Mot De Passe" name="password">
                 <input type="confirm_password" placeholder="Comfirmez le mot De Passe" name="confirm_password">
                 <button type="submit" class="button">Inscription</button>
-                <p> Si vous avez un compte :<a href="login.html"> cliquer ici</a> </p>
+                <p> Si vous avez un compte :<a href="login.php"> cliquer ici</a> </p>
             </form>
         </div>
 

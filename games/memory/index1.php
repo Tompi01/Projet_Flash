@@ -2,21 +2,15 @@
 <html lang="en">
 
 
-
 <?php 
-require_once 'utils/common.php';
+require_once '../../utils/common.php';
 require_once SITE_ROOT. 'partials/head.php';
 require_once SITE_ROOT. 'partials/header.php';
+
 ?>
 
 
-
-
-
-
-
-
-
+<section class="theme">
 <body>
 <section class="theme">
 
@@ -73,12 +67,12 @@ require_once SITE_ROOT. 'partials/header.php';
 
  
  </body>
-<!-------------------------------------------FOOTER---------------------------------------------------->
+    <!-------------------------------------------FOOTER---------------------------------------------------->
 <?php 
 require_once SITE_ROOT. 'partials/footer.php';
 ?>
+
+    <!-------------------------------------------FIN FOOTER---------------------------------------------------->
+
 </section>
-<!-------------------------------------------FIN FOOTER---------------------------------------------------->
-
-
 </html>
