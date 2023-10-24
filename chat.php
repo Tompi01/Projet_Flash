@@ -4,9 +4,8 @@
 
 <?php 
 require_once 'utils/common.php';
-require_once 'partials/head.php';
-require_once 'partials/header.php';
-require_once 'partials/footer.php';
+require_once SITE_ROOT. 'partials/head.php';
+require_once SITE_ROOT. 'partials/header.php';
 ?>
 
 
@@ -65,3 +64,9 @@ require_once 'partials/footer.php';
                 <button id="send-button">Envoyer</button>
             </div>
         </div>
+
+
+
+<?php 
+require_once SITE_ROOT. 'partials/footer.php';
+?>
