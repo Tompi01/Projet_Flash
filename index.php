@@ -5,15 +5,35 @@
 require_once 'utils/common.php';
 require_once SITE_ROOT . 'partials/head.php';
 require_once SITE_ROOT . 'partials/header.php';
-require_once 'utils/database.php'
+require_once 'utils/database.php';
 ?>
 
+
 <?php
-$pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC LIMIT 1');
-    $pdoScores->execute([]);
-    $meilleurScore = $pdoScores->fetch();
-    echo $meilleurScore -> score_jeu
+
+$pdoTimeGame = $pdo->prepare('SELECT game_time FROM score ORDER BY game_time ASC LIMIT 1');
+$pdoTimeGame->execute([]);
+$meilleurTime = $pdoTimeGame->fetch();
+
+$pdoGamePlayed = $pdo->prepare('SELECT count(id) AS nombre FROM score');
+$pdoGamePlayed->execute([]);
+$partiejouer = $pdoGamePlayed->fetch();
+
+
+$pdoJoueurInscrit = $pdo->prepare('SELECT count(id) AS nombre FROM utilisateur');
+$pdoJoueurInscrit->execute([]);
+$nbJoueur = $pdoJoueurInscrit->fetch();
+
+
+
+
+
+
+
+
 ?>
+
+
 
 <section class="ind">
     <body>
@@ -108,12 +128,12 @@ $pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC L
                 <div class="row">
 
                     <div class="carre1">
-                        <p><span>310</span></p>
+                        <p><span> <?php echo $partiejouer->nombre?></span></p>
                         <p>Parties Jouées</p>
                     </div>
 
                     <div class="carre1">
-                        <p><span>1020</span></p>
+                        <p><span>2</span></p>
                         <p>Joueur Connectés</p>
                     </div>
                 </div>
@@ -122,12 +142,12 @@ $pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC L
                 <div class="row">
 
                     <div class="carre2">
-                        <p><span>10sec</span></p>
-                        <p>Temp Record</p>
+                        <p><span> <?php echo $meilleurTime -> game_time?> </span></p>
+                        <p>Temps Record</p>
                     </div>
 
                     <div class="carre2">
-                        <p><span>21 300</span></p>
+                        <p><span><?php echo $nbJoueur->nombre?></span></p>
                         <p>Joueur Inscrits</p>
                     </div>
 
