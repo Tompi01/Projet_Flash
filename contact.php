@@ -19,15 +19,15 @@ require_once SITE_ROOT. 'partials/header.php';
         </div>
         <section class="d-flex">
             <div class="back">
-                <img src="pics/tel.png" alt="tel" class="image2">
+                <img src="<?php PROJECT_FOLDER ?> assets/tel.png" alt="tel" class="image2">
                 <h3>06 05 04 03 02</h3>
             </div>
             <div class="back">
-                <img src="pics/mail.png" alt="mail" class="image2">
+                <img src="<?php PROJECT_FOLDER ?> assets/mail.png" alt="mail" class="image2">
                 <h3>support@powerofmemory.com</h3>
             </div>
             <div class="back">
-            <img src="pics/lieu.png" alt="lieu" class="image2">
+            <img src="<?php PROJECT_FOLDER ?> assets/lieu.png" alt="lieu" class="image2">
             <h3>Paris</h3>
         </div>
         </section>

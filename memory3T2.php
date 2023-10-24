@@ -47,178 +47,178 @@ require_once SITE_ROOT. 'partials/header.php';
     <table class="card-memory">
         
         <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
         </tr>
 
         <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
         </tr>
 
         <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
         </tr>    
         <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
         </tr>
         <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-        </tr>
-
-        <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
         </tr>
 
         <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+        </tr>
+
+        <tr>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
         </tr>    
         <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
         </tr>
         <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-        </tr>
-
-        <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
         </tr>
 
         <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+        </tr>
+
+        <tr>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
         </tr>    
         <tr>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
-            <td><img src="pics/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/cartepokemon.jpeg"></td>
         </tr>
 
         

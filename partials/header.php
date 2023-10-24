@@ -1,3 +1,7 @@
+
+<?php require_once SITE_ROOT . 'partials/head.php'?>
+
+
 <header>
             
             <div class="wrapper">

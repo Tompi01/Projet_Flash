@@ -1,5 +1,5 @@
 
-
+<?php require_once SITE_ROOT . 'partials/head.php'?>
 
 
 
@@ -15,11 +15,11 @@
                 <br>
                 <p><span class="orange">Location :</span> Paris</p>
                 <br>
-                <a href="https://facebook.com"><img src="pics/facebook2.png" alt="facebook" class="image1"></a>
-                <a href="https://twitter.com"><img src="pics/tweeter2.png" alt="twitter" class="image1"></a>
-                <a href="https://google.com"><img src="pics/google2.png" alt="google" class="image1"></a>
-                <a href="https://pinterest.fr"><img src="pics/pinterest2.png" alt="pinterest" class="image1"></a>
-                <a href="https://instagram.com"><img src="pics/instagram2.png" alt="instagram" class="image1"></a>
+                <a href="https://facebook.com"><img src="<?php PROJECT_FOLDER ?> assets/facebook2.png" alt="facebook" class="image1"></a>
+                <a href="https://twitter.com"><img src="<?php PROJECT_FOLDER ?> assets/tweeter2.png" alt="twitter" class="image1"></a>
+                <a href="https://google.com"><img src="<?php PROJECT_FOLDER ?> assets/google2.png" alt="google" class="image1"></a>
+                <a href="https://pinterest.fr"><img src="<?php PROJECT_FOLDER ?> assets/pinterest2.png" alt="pinterest" class="image1"></a>
+                <a href="https://instagram.com"><img src="<?php PROJECT_FOLDER ?> assets/instagram2.png" alt="instagram" class="image1"></a>
                 <div class="copyright">Copyright © 2022 Tous droits réservés.</div>
             </div>
             <div class="wrrapper">

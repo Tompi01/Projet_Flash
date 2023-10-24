@@ -47,84 +47,84 @@ require_once SITE_ROOT. 'partials/header.php';
     <table class="card-memory">
 
         <tr>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
         </tr>
         <tr>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
         </tr>
         <tr>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
         </tr>
         <tr>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
         </tr>
         <tr>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
         </tr>
         <tr>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
         </tr>
         <tr>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
         </tr>
         <tr>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
-            <td><img src="pics/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
+            <td><img src="<?php PROJECT_FOLDER ?> assets/carteyugioh.jpeg"></td>
         </tr>
         
         

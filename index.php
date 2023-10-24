@@ -5,14 +5,23 @@
 require_once 'utils/common.php';
 require_once SITE_ROOT . 'partials/head.php';
 require_once SITE_ROOT . 'partials/header.php';
+require_once 'utils/database.php'
+?>
+
+<?php
+$pdoScores = $pdo->prepare('SELECT score_jeu FROM score ORDER BY score_jeu ASC LIMIT 1');
+    $pdoScores->execute([]);
+    $meilleurScore = $pdoScores->fetch();
+    echo $meilleurScore -> score_jeu
 ?>
 
 <section class="ind">
     <body>
         <div class="container">
 
-            <img class="image" src="pics/pictureMain1.jpeg" alt="Image">
+            <img class="image" src="<?php PROJECT_FOLDER ?> assets/pictureMain1.jpeg" alt="Image">
 
+            
 
             <div class="texte-sur-image">
 
@@ -34,17 +43,17 @@ require_once SITE_ROOT . 'partials/header.php';
         <div class="games3">
 
             <div class="image-games3">
-                <img src="pics/OrdinateurNeon.png" alt="Image 1">
+                <img src="<?php PROJECT_FOLDER ?> assets/OrdinateurNeon.png" alt="Image 1">
 
             </div>
 
             <div class="image-games3">
-                <img src="pics/trotinette.png" alt="Image 2">
+                <img src="<?php PROJECT_FOLDER ?> assets/trotinette.png" alt="Image 2">
 
             </div>
 
             <div class="image-games3">
-                <img src="pics/pokerpicture.jpeg" alt="Image 3">
+                <img src="<?php PROJECT_FOLDER ?> assets/pokerpicture.jpeg" alt="Image 3">
 
             </div>
 
@@ -90,7 +99,7 @@ require_once SITE_ROOT . 'partials/header.php';
         <div id="carre">
 
             <div class="imag">
-                <img src="pics/WatchDog.png" alt="Image 4">
+                <img src="<?php PROJECT_FOLDER ?> assets/WatchDog.png" alt="Image 4">
             </div>
 
 
@@ -131,7 +140,7 @@ require_once SITE_ROOT . 'partials/header.php';
         <div class="transition">
             <span class="equipe">Notre Equipe</span>
             <p>Quisque commodo facilisis Durus. terouum volutnat arcu viverra s</p>
-            <img src="pics/transition-jaune.jpg">
+            <img src="<?php PROJECT_FOLDER ?> assets/transition-jaune.jpg">
 
         </div>
 
@@ -145,7 +154,7 @@ require_once SITE_ROOT . 'partials/header.php';
         <section class="container2">
 
             <div class="item-equipe">
-                <img src="pics/Hamilton.jpeg" alt="Image 5">
+                <img src="<?php PROJECT_FOLDER ?> assets/Hamilton.jpeg" alt="Image 5">
                 <h2 class="title">HAMILTON</h2>
                 <p class="text-equipe"> Games Developer </p>
 
@@ -153,7 +162,7 @@ require_once SITE_ROOT . 'partials/header.php';
             </div>
 
             <div class="item-equipe">
-                <img src="pics/Marion.jpeg" alt="Image 6">
+                <img src="<?php PROJECT_FOLDER ?> assets/Marion.jpeg" alt="Image 6">
                 <h2 class="title">MARION</h2>
                 <p class="text-equipe">Game Designer</p>
 
@@ -161,7 +170,7 @@ require_once SITE_ROOT . 'partials/header.php';
             </div>
 
             <div class="item-equipe">
-                <img src="pics/picArnold.jpeg" alt="Image 4">
+                <img src="<?php PROJECT_FOLDER ?> assets/picArnold.jpeg" alt="Image 4">
                 <h2 class="title"> ARNOLD</h2>
                 <p class="text-equipe">Game Developer</p>
 
