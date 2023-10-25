@@ -18,10 +18,13 @@ function connectToDbAndGetPdo(): PDO
     }
 }
 function loginCheck(string $userMail, string $password): ?string
-{
+{ 
+    $password = hash('sha256', $_POST['password']);
     $pdo = connectToDbAndGetPdo();
-    $result = $pdo->query(sprintf('SELECT * FROM utilisateur WHERE utilisateur.mail = "%s"', $userMail))->fetch();
-    if ($result->mot_de_passe === $password) {
+    $pdoPrepare = $pdo->prepare('SELECT *, mot_de_passe as pwd FROM utilisateur WHERE utilisateur.mail = :mail');
+    $pdoPrepare->execute([":mail" => $userMail]);
+    $result = $pdoPrepare->fetch();
+    if ($result->pwd == $password ) {
         return $result->id;
     }
     return null;
