@@ -20,7 +20,8 @@ require_once 'utils/database.php';
             require_once 'utils/common.php';
             require_once 'utils/database.php';
 
-            if (isset($_POST['email']) && isset($_POST['password'])) 
+
+            if (isset($_POST['email']) && isset($_POST['password'])) {
                 $userId = loginCheck($_POST['email'], $_POST['password']);
                 if ($userId) {  
 
@@ -28,12 +29,14 @@ require_once 'utils/database.php';
                 } else {
                     echo "Identifiants incorrects. Veuillez réessayer.";
                 }
+            }
 
         ?>
         <div class="login">
             <form method="POST" action="login.php">
                 <input class="" type="email" placeholder="email" name="email">
                 <input type="password" placeholder="Mot De Passe" name="password">
+                
                 <button type="submit" class="button">connexion</button>
                 <p> Si vous avez un compte :<a href="<?= PROJECT_FOLDER ?>register.php"> cliquez ici</a> </p>
             </form>
