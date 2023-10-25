@@ -36,6 +36,7 @@ require_once 'utils/database.php';
                     header('Location: games/memory/index1.php');
                 }
             }
+            
 
         ?>
 
