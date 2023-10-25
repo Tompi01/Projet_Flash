@@ -1,7 +1,7 @@
 
 <?php require_once SITE_ROOT . 'partials/head.php'?>
 <?php $current_page = basename($_SERVER['PHP_SELF']);
-echo $current_page?>
+?>
 
 <header>
             

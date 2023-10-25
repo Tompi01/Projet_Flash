@@ -460,6 +460,8 @@
     margin-right: auto;
 }
 .reg .login{
+    padding-top: 50px;
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -899,3 +901,6 @@
   }
 
   
+  span.error {
+    color : red
+}
