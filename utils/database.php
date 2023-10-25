@@ -19,13 +19,20 @@ function connectToDbAndGetPdo(): PDO
 }
 function loginCheck(string $userMail, string $password): ?string
 {
-    $pdo = connectToDbAndGetPdo();
-    $result = $pdo->query(sprintf('SELECT * FROM utilisateur WHERE utilisateur.mail = "%s"', $userMail))->fetch();
-    if ($result->mot_de_passe === $password) {
-        return $result->id;
-    }
+        try {
+            $pdo = connectToDbAndGetPdo();
+            $pdoStatement = $pdo->prepare('SELECT *, mot_de_passe as pwd FROM utilisateur WHERE utilisateur.mail = :mail');
+            $pdoStatement->execute([":mail" => $userMail]);
+            $result = $pdoStatement->fetch();        
+        
+            if ($result->pwd == $password) {
+                return $result->id;
+            } 
+        } catch (PDOException $e) {
+            return "Problème de connexion à la base de donnée... Contactez l'administrateur du site";
+        }
     return null;
-
+}
 
 $pdo = connectToDbAndGetPdo();
 
