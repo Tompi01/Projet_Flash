@@ -3,7 +3,7 @@ function connectToDbAndGetPdo(): PDO
 {
     $dbname = 'projet_flash';
     $host = 'localhost';
-    $dsn = "mysql:dbname=$dbname;host=$host;charset=utf8";
+    $dsn = "mysql:dbname=$dbname;port=8888;host=$host;charset=utf8";
     $user = 'root';
     $pass = '';
     $driver_options = [
@@ -17,4 +17,13 @@ function connectToDbAndGetPdo(): PDO
         echo 'La connexion à la base de données a échouée.';
     }
 }
-$pdo = connectToDbAndGetPdo();
+function loginCheck(string $userMail, string $password): ?string
+{
+    $pdo = connectToDbAndGetPdo();
+    $result = $pdo->query(sprintf('SELECT * FROM utilisateur WHERE utilisateur.mail = "%s"', $userMail))->fetch();
+    if ($result->mot_de_passe === $password) {
+        return $result->id;
+    }
+    return null;
+
+}
