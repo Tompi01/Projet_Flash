@@ -35,7 +35,7 @@ require_once 'utils/database.php';
                 <input class="" type="email" placeholder="email" name="email">
                 <input type="password" placeholder="Mot De Passe" name="password">
                 <button type="submit" class="button">connexion</button>
-                <p> Si vous n'avez pas de compte :<a href="register.php"> cliquer ici</a> </p>
+                <p> Si vous avez un compte :<a href="<?= PROJECT_FOLDER ?>register.php"> cliquez ici</a> </p>
             </form>
         </div>
 

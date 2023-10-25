@@ -26,4 +26,27 @@ function loginCheck(string $userMail, string $password): ?string
     }
     return null;
 
+
+$pdo = connectToDbAndGetPdo();
+
+
+
+function insertionUtilisateur($pdo, $email, $pseudo, $password) : void {
+    $insertionDonnee = $pdo->prepare('INSERT INTO utilisateur (mail , mot_de_passe, pseudo) VALUES (:email, :password, :pseudo)');
+    $insertionDonnee->execute([':email' => $email, ':password' => $password, ':pseudo' => $pseudo]);
+}
+
+
+function pseudoUse($pdo,$pseudo) : bool {
+    $pseudoUsed = $pdo->prepare('SELECT pseudo FROM utilisateur WHERE pseudo = :pseudo');
+    $pseudoUsed->execute([':pseudo' => $pseudo]);
+    $pseudo_utilise = $pseudoUsed -> fetch();
+    return $pseudo_utilise -> pseudo != null;
+}
+
+function emailUse($pdo,$email) : bool {
+    $emailUsed = $pdo->prepare('SELECT mail FROM utilisateur WHERE mail = :email');
+    $emailUsed->execute([':email' => $email]);
+    $email_utilise = $emailUsed -> fetch();
+    return $email_utilise -> mail != null;
 }
