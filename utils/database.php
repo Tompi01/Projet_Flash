@@ -18,21 +18,18 @@ function connectToDbAndGetPdo(): PDO
     }
 }
 function loginCheck(string $userMail, string $password): ?string
-{
-        try {
-            $pdo = connectToDbAndGetPdo();
-            $pdoStatement = $pdo->prepare('SELECT *, mot_de_passe as pwd FROM utilisateur WHERE utilisateur.mail = :mail');
-            $pdoStatement->execute([":mail" => $userMail]);
-            $result = $pdoStatement->fetch();        
-        
-            if ($result->pwd == $password) {
-                return $result->id;
-            } 
-        } catch (PDOException $e) {
-            return "Problème de connexion à la base de donnée... Contactez l'administrateur du site";
-        }
+{ 
+    $password = hash('sha256', $_POST['password']);
+    $pdo = connectToDbAndGetPdo();
+    $pdoPrepare = $pdo->prepare('SELECT *, mot_de_passe as pwd FROM utilisateur WHERE utilisateur.mail = :mail');
+    $pdoPrepare->execute([":mail" => $userMail]);
+    $result = $pdoPrepare->fetch();
+    if ($result->pwd == $password ) {
+        return $result->id;
+    }
     return null;
 }
+
 
 $pdo = connectToDbAndGetPdo();
 
@@ -48,12 +45,12 @@ function pseudoUse($pdo,$pseudo) : bool {
     $pseudoUsed = $pdo->prepare('SELECT pseudo FROM utilisateur WHERE pseudo = :pseudo');
     $pseudoUsed->execute([':pseudo' => $pseudo]);
     $pseudo_utilise = $pseudoUsed -> fetch();
-    return $pseudo_utilise -> pseudo != null;
+    return isset($pseudo_utilise -> pseudo);
 }
 
 function emailUse($pdo,$email) : bool {
     $emailUsed = $pdo->prepare('SELECT mail FROM utilisateur WHERE mail = :email');
     $emailUsed->execute([':email' => $email]);
     $email_utilise = $emailUsed -> fetch();
-    return $email_utilise -> mail != null;
+    return isset($email_utilise -> mail);
 }
