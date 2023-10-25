@@ -25,6 +25,7 @@ function loginCheck(string $userMail, string $password): ?string
         return $result->id;
     }
     return null;
+}
 
 
 $pdo = connectToDbAndGetPdo();
@@ -41,12 +42,12 @@ function pseudoUse($pdo,$pseudo) : bool {
     $pseudoUsed = $pdo->prepare('SELECT pseudo FROM utilisateur WHERE pseudo = :pseudo');
     $pseudoUsed->execute([':pseudo' => $pseudo]);
     $pseudo_utilise = $pseudoUsed -> fetch();
-    return $pseudo_utilise -> pseudo != null;
+    return isset($pseudo_utilise -> pseudo);
 }
 
 function emailUse($pdo,$email) : bool {
     $emailUsed = $pdo->prepare('SELECT mail FROM utilisateur WHERE mail = :email');
     $emailUsed->execute([':email' => $email]);
     $email_utilise = $emailUsed -> fetch();
-    return $email_utilise -> mail != null;
+    return isset($email_utilise -> mail);
 }

@@ -53,10 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 
-
-
-
-
 ?>
 
 
@@ -87,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="password" placeholder="Mot De Passe" name="password" required value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>">  
                 <span class="error"><?php echo $passwordError; ?></span>
 
-                <input type="password" placeholder="Comfirmez le mot De Passe" name="confirm_password" required value="<?php echo isset($_POST['confirm_password']) ? $_POST['confirm_password'] : ''; ?>">
+                <input type="password" placeholder="Comfirmez le mot De Passe" name="confirm_password" required value="<?php echo isset($_POST['confirm_password']) ? $_POST['confirm_password'] : ''; ?>">>
                 <span class="error"><?php echo $confirm_passwordError; ?></span>
 
                 <button type="submit" class="button">Inscription</button>
