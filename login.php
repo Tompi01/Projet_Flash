@@ -16,22 +16,30 @@ require_once 'utils/database.php';
         <div class="banner">
             <h1>Connexion</h1>
         </div>
-        <?php 
+        <div class="login">
+            <form method="POST" action="login.php">
+                <input class="" type="email" placeholder="email" name="email">
+                <input type="password" placeholder="Mot De Passe" name="password">
+                <button type="submit" class="button">connexion</button>
+                <p> Si vous avez un compte :<a href="<?= PROJECT_FOLDER ?>register.php"> cliquez ici</a> </p>
+            <?php 
             require_once 'utils/common.php';
             require_once 'utils/database.php';
 
 
             if (isset($_POST['email']) && isset($_POST['password'])) {
                 $userId = loginCheck($_POST['email'], $_POST['password']);
-                if ($userId) {  
-
-                    header('Location: games/memory/index1.php');
+                if (!$userId) {  ?>
+                    <p class="warning">Identifiants incorrects. Veuillez réessayer.</p>
+                    <?php
                 } else {
-                    echo "Identifiants incorrects. Veuillez réessayer.";
+                    header('Location: games/memory/index1.php');
                 }
             }
 
         ?>
+
+
         <div class="login">
             <form method="POST" action="login.php">
                 <input class="" type="email" placeholder="email" name="email">
