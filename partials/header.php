@@ -30,8 +30,20 @@
                             <li>
                             <a href="<?=PROJECT_FOLDER ?>register.php"<?php if ($current_page == 'register.php') : ?> style="color:orange;" <?php endif;?>>S'INSCRIRE</a>
                             </li>
-                            <li>
-                                <a href="<?=PROJECT_FOLDER ?>myAccount.php"<?php if ($current_page == 'myAccount.php') : ?> style="color:orange;" <?php endif;?>>MON PROFIL</a>
+                            <li> 
+
+                                <a href="<?=PROJECT_FOLDER ?>myAccount.php"<?php if ($current_page == 'myAccount.php') : ?> style="color:orange;" <?php endif;?>>
+                                    <?php
+                                    if (isset($_SESSION['pseudo'])){
+                                        echo $_SESSION['pseudo'];
+                                
+                                    }
+                                    else {
+                                        echo 'MON PROFIL';
+                                    }
+                                    ?>
+                                </a>
+                            
                             </li>
                         </ul>
                     </nav>		
