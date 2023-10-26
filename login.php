@@ -30,11 +30,13 @@ require_once 'utils/database.php';
 
             if (isset($_POST['email']) && isset($_POST['password'])) 
             {
-                $userId = loginCheck($_POST['email'], $_POST['password']);
-                if (!$userId) {  ?>
+                $user = loginCheck($_POST['email'], $_POST['password']);
+                if (!$user) {  ?>
                     <p class="warning">Identifiants incorrects. Veuillez réessayer.</p>
                     <?php
                 } else {
+                    $_SESSION['userId'] = $user->id;
+                    $_SESSION['pseudo'] = $user->pseudo;
                     header('Location: games/memory/index1.php');
                 }
             }
