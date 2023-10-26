@@ -450,7 +450,15 @@
     font-weight:bold;
     color: white;
     border-radius: 2px;
+ }
+
+.acc h1{
+    color: white;
+    font-size: 50px;
 }
+
+
+
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<register*/
 .reg form{
     display: flex;
