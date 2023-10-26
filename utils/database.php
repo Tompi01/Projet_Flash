@@ -17,7 +17,7 @@ function connectToDbAndGetPdo(): PDO
         echo 'La connexion à la base de données a échouée.';
     }
 }
-function loginCheck(string $userMail, string $password): ?string
+function loginCheck(string $userMail, string $password): ?object
 { 
     $password = hash('sha256', $_POST['password']);
     $pdo = connectToDbAndGetPdo();
@@ -25,7 +25,7 @@ function loginCheck(string $userMail, string $password): ?string
     $pdoPrepare->execute([":mail" => $userMail]);
     $result = $pdoPrepare->fetch();
     if ($result->pwd == $password ) {
-        return $result->id;
+        return $result;
     }
     return null;
 }
