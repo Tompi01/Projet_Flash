@@ -3,9 +3,31 @@
 
 <?php
 require_once 'utils/common.php';
-require_once SITE_ROOT . 'partials/head.php';
-require_once SITE_ROOT . 'partials/header.php';
+require_once SITE_ROOT. 'partials/head.php';
+require_once SITE_ROOT. 'partials/header.php';
 require_once 'utils/database.php';
+
+
+$uploadDir = SITE_ROOT.'/userFiles/';
+
+$allowedExtensions = array('jpg','jpeg');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    if (isset($_FILES['upload']) && $_FILES['upload']['error'] === UPLOAD_ERR_OK){
+        $file =$_FILES['upload'];
+        $fileExtension = pathinfo($file['name'], PATHINFO_EXTENSION);
+        if (in_array(strtolower($fileExtension),$allowedExtensions)){
+            $userId = $_SESSION['userId'] ;
+            $fileName = $userId . '_profile.jpg';
+            $filePath = $uploadDir . $fileName ;
+            move_uploaded_file($_FILES['upload']['tmp_name'],$filePath);
+
+            
+        }
+    }
+}
+
 ?>
 
 
@@ -15,8 +37,21 @@ require_once 'utils/database.php';
     <body>
 
         <div class="banner">
-            <h1>Mon profil</h1>
+        <h1>Mon profil</h1>
         </div>
+        <div class="logo-container">
+        <div class="logo">
+
+            <img src="<?=PROJECT_FOLDER .'userFiles/'. $_SESSION['userId'].'_profile.jpg'?>" alt="Image 6">
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="upload" accept="image/jpg">
+                <button type="submit" class="button"> upload </button>
+                
+            </form>
+            </div>
+
+        </div>
+
 
 
 
@@ -30,6 +65,7 @@ require_once 'utils/database.php';
             <form method="POST" class ="deco">
                     <input class="appliquer" type="submit" name="disconnect" value="DÉCONNEXION">
             </form>
+
 
 
 
@@ -174,6 +210,7 @@ require_once 'utils/database.php';
 
 
         </section>
+    </div>
 
 
         <?php
