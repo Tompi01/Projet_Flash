@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($emailError == '' && $pseudoError == '' && $passwordError == '' && $confirm_passwordError == '') {
         $_POST['password'] = hash('sha256', $_POST['password']);
         insertionUtilisateur($pdo, $_POST['email'], $_POST['pseudo'], $_POST['password']);
-        header('Location: games/memory/index1.php');
+        header('Location: login.php');
     } else{
         $registrationError = "Erreur lors de l'inscription. Veuillez corriger les erreurs ci-dessus.";
     }
