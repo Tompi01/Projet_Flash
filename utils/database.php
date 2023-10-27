@@ -54,3 +54,37 @@ function emailUse($pdo,$email) : bool {
     $email_utilise = $emailUsed -> fetch();
     return isset($email_utilise -> mail);
 }
+
+
+
+
+function goodOldEmail($pdo, $emailVerif, $idUtilisateur): bool
+{
+    
+    $pdoEmailExist= $pdo->prepare('SELECT mail FROM utilisateur WHERE id = :id');
+    $pdoEmailExist->execute([':id' => $idUtilisateur]);
+    $emailExist = $pdoEmailExist->fetch();
+    return $emailExist->mail == $emailVerif;
+}
+
+function updateEmail($pdo, $newEmail, $idUtilisateur): void
+{
+    $pdoNewEmail = $pdo->prepare('UPDATE utilisateur SET mail = :email WHERE id = :id');
+    $pdoNewEmail->execute([':email' => $newEmail, ':id' => $idUtilisateur]);
+}
+
+
+function goodOldPassword($pdo, $passwordVerif, $idUtilisateur): bool
+{
+    $passwordVerif = hash('sha256', $passwordVerif);
+    $pdoPasswordExist= $pdo->prepare('SELECT mot_de_passe FROM utilisateur WHERE id = :id');
+    $pdoPasswordExist->execute([':id' => $idUtilisateur]);
+    $passwordExist = $pdoPasswordExist->fetch();
+    return $passwordExist->mot_de_passe == $passwordVerif;
+}
+
+function updatePassword($pdo, $newPassword, $idUtilisateur): void
+{
+    $pdoNewPassword = $pdo->prepare('UPDATE utilisateur SET mot_de_passe = :new_password WHERE id = :id');
+    $pdoNewPassword->execute([':new_password' => hash('sha256',$newPassword), ':id' => $idUtilisateur]);
+}

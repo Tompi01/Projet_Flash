@@ -35,11 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $confirm_passwordError = 'Les mots de passe ne correspondent pas.';
     }
 
-    if(pseudoUse($pdo,$_POST['pseudo'])) {
+    if (pseudoUse($pdo, $_POST['pseudo'])) {
         $pseudoError = 'Le pseudo est deja utilisé';
     }
 
-    if(emailUse($pdo,$_POST['email'])) {
+    if (emailUse($pdo, $_POST['email'])) {
         $emailError = "L'Email est deja utilisé";
     }
 
@@ -47,16 +47,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($emailError == '' && $pseudoError == '' && $passwordError == '' && $confirm_passwordError == '') {
         $_POST['password'] = hash('sha256', $_POST['password']);
         insertionUtilisateur($pdo, $_POST['email'], $_POST['pseudo'], $_POST['password']);
+
         header('Location: login.php');
     } else{
+      
         $registrationError = "Erreur lors de l'inscription. Veuillez corriger les erreurs ci-dessus.";
     }
 }
 
 
 ?>
-
-
 
 
 
@@ -78,10 +78,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="email" placeholder="Email" name="email" required value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>">
                 <span class="error"><?php echo $emailError; ?> </span>
 
-                <input placeholder="Pseudo" name="pseudo" minlength=4 required value="<?php echo isset($_POST['pseudo']) ? $_POST['pseudo'] : ''; ?>">
+                <input placeholder="Pseudo" name="pseudo" minlength=4 maxlength=25 required value="<?php echo isset($_POST['pseudo']) ? $_POST['pseudo'] : ''; ?>">
                 <span class="error"><?php echo $pseudoError; ?></span>
 
-                <input type="password" placeholder="Mot De Passe" name="password" required value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>">  
+                <input type="password" placeholder="Mot De Passe" name="password" required value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>">
                 <span class="error"><?php echo $passwordError; ?></span>
 
                 <input type="password" placeholder="Comfirmez le mot De Passe" name="confirm_password" required value="<?php echo isset($_POST['confirm_password']) ? $_POST['confirm_password'] : ''; ?>">
@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 
-        `
+
 
 
 
