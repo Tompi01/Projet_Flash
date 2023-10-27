@@ -18,8 +18,8 @@ require_once 'utils/database.php';
         </div>
         <div class="login">
             <form method="POST" action="login.php">
-                <input class="" type="email" placeholder="email" name="email">
-                <input type="password" placeholder="Mot De Passe" name="password">
+                <input class="" type="email" placeholder="email" name="email" required>
+                <input type="password" placeholder="Mot De Passe" name="password" required>
                 <button type="submit" class="button">connexion</button>
                 <p> Si vous avez un compte :<a href="<?= PROJECT_FOLDER ?>register.php"> cliquez ici</a> </p>
        
