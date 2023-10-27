@@ -11,6 +11,7 @@ require_once 'utils/database.php';
 
 <?php
 
+
 $emailError = $pseudoError = $passwordError = $confirm_passwordError = '';
 $registrationError = '';
 

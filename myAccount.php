@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $filePath = $uploadDir . $fileName ;
             move_uploaded_file($_FILES['upload']['tmp_name'],$filePath);
 
+            
         }
     }
 }
