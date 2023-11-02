@@ -60,6 +60,9 @@ function passwordCheck() {
       hardDifficult.textContent = "Mot de passe très difficile. " + tips;
       hardDifficult.style.color = "green";
     }
+  }
+
+
 
 const levelSelect = document.getElementById("levelSelect");
 const themeSelect = document.getElementById("themeSelect");
@@ -102,8 +105,6 @@ let flippedCards = 0;
 let backImage = ""; 
 
 function createMemoryGrid(rows, theme) {
-  gridContainer.innerHTML = "";
-
   const { rows: maxRows, cols: maxCols } = gridSizeOptions[rows];
   const cardWidthPercentage = 100 / maxCols;
   const cardMarginPercentage = 1;
@@ -143,6 +144,8 @@ generateGridButton.addEventListener("click", () => {
   const selectedTheme = themeSelect.value;
   const selectedLevel = parseInt(levelSelect.value, 10); 
   createMemoryGrid(selectedLevel, selectedTheme);
+
+  commencerChrono();
 });
 
 function generateAndShuffleCardList(totalCards) {
@@ -169,8 +172,7 @@ function getBackImage(theme) {
       return "../../assets/dos_pokemon.jpeg";
     case "ClashRoyale":
       return "../../assets/dos_clashRoyale.png";
-    default:
-      return "../../assets/dos_default.png"; 
+ 
   }
 }
 
@@ -213,14 +215,77 @@ function flipCard(img, theme) {
 }
 
 function checkWin() {
-    const cards = document.querySelectorAll(".card-image");
-  
-    for (const card of cards) {
-      if (card.classList.contains("face-down")) {
-        return; 
-      }
+  const cards = document.querySelectorAll(".card-image");
+
+  for (const card of cards) {
+    if (card.classList.contains("face-down")) {
+      return;
     }
+  }
+
+
+  const victoryMessage = document.getElementById("victoryMessage");
+  victoryMessage.style.display = "block";
+
+
   
 
-    alert("Félicitations, vous avez gagné !");
+  gameIsFinished = true;
+  clearInterval(chrono);
+}
+
+
+  let gameIsFinished = false;
+
+  let hours = 0;
+  let minutes = 0;
+  let seconds = 0;
+  let ms = 0;
+  let timer;
+  let chrono;
+ 
+  
+  function commencerChrono() {
+    if (chrono) {
+      clearInterval(chrono); // Arrête le chrono s'il était déjà en cours
+    }
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+    chrono = setInterval(actualiserChrono, 100);
+    timer = document.querySelectorAll("#hours, #minutes, #seconds");
+  }
+  
+  
+  function actualiserChrono() {
+    if (gameIsFinished) {
+      clearInterval(chrono);
+      return;
+    }
+  
+    ms += 1;
+    if (ms == 10) {
+      ms = 0;
+      seconds += 1;
+    }
+    if (seconds == 60) {
+      seconds = 0;
+      minutes += 1;
+    }
+    if (minutes == 60) {
+      minutes = 0;
+      hours += 1;
+    }
+  
+    timer[0].innerHTML = hours;
+    timer[1].innerHTML = minutes;
+    timer[2].innerHTML = seconds;
+  }
+  
+  function reinitialiserChrono() {
+    clearInterval(chrono);
+    (seconds = 0), (minutes = 0), (hours = 0);
+    timer[0].innerHTML = hours;
+    timer[1].innerHTML = minutes;
+    timer[2].innerHTML = seconds;
   }
