@@ -53,5 +53,5 @@ require_once SITE_ROOT . 'partials/head.php';
             var pseudo = '<?= $_SESSION['pseudo'] ?>';
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="./styles/script.js">
+<script src="./styles/chat.js">
 </script>
