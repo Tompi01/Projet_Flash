@@ -181,6 +181,7 @@ function flipCard(img, theme) {
   if (flippedCards < 2) {
     if (img.classList.contains("face-down")) {
       img.classList.remove("face-down");
+      img.classList.add("flip-animation");
       const cardId = img.classList[1];
       img.src = `../../assets/Carte/${cardFaces[theme][cardId]}`;
 
@@ -189,26 +190,28 @@ function flipCard(img, theme) {
       } else {
         secondCard = img;
         canFlip = false;
-        flippedCards = 2; 
+        flippedCards = 2;
 
         if (firstCard.src === secondCard.src) {
           pairsFound++;
           firstCard = null;
           secondCard = null;
           canFlip = true;
-          flippedCards = 0; 
-          checkWin(); 
+          flippedCards = 0;
+          checkWin();
         } else {
           setTimeout(() => {
             firstCard.classList.add("face-down");
             secondCard.classList.add("face-down");
             firstCard.src = backImage;
             secondCard.src = backImage;
+            firstCard.classList.remove("flip-animation");
+            secondCard.classList.remove("flip-animation");
             firstCard = null;
             secondCard = null;
-            canFlip = true; 
-            flippedCards = 0; 
-          }, 1000); 
+            canFlip = true;
+            flippedCards = 0;
+          }, 1000);
         }
       }
     }
