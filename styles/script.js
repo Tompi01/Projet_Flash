@@ -1,67 +1,66 @@
 
 function passwordCheck() {
-    var password = document.getElementById("password").value;
-    var easy = document.getElementById("easy");
-    var medium = document.getElementById("medium");
-    var difficult = document.getElementById("difficult");
-    var hardDifficult = document.getElementById("hardDifficult");
-  
-    var strength = 0;
-    var tips = "";
-  
-    if (password.length < 8) {
-      tips += "Mot de passe pas assez long.";
-    } else {
-      strength += 1;
-    }
-  
-    if (password.match(/[a-z]/) && password.match(/[A-Z]/)) {
-      strength += 1;
-    } else {
-      tips += "Une majuscule et une minuscule ";
-    }
-  
-    if (password.match(/\d/)) {
-      strength += 1;
-    } else {
-      tips += "Au moins un nombre. ";
-    }
-  
-    if (password.match(/[^a-zA-Z\d]/)) {
-      strength += 1;
-    } else {
-      tips += "Inclus un charactère spécial. ";
-    }
-  
-    if 
-    (strength === 3) {
-      document.getElementById("medium").innerHTML='';
-      document.getElementById("easy").innerHTML='';
-      document.getElementById("hardDifficult").innerHTML='';
-      difficult.textContent = "Mot de passe difficile " + tips;
-      difficult.style.color = "orange";
-  } else if 
-  (strength === 2) {
-      document.getElementById("easy").innerHTML='';
-      document.getElementById("hardDifficult").innerHTML='';
-      document.getElementById("difficult").innerHTML='';
-      medium.textContent = "Mot de passe moyen. " + tips;
-      medium.style.color = "yellow";
-    } else if (strength < 2) {
-      document.getElementById("hardDifficult").innerHTML='';
-      document.getElementById("difficult").innerHTML='';
-      document.getElementById("medium").innerHTML='';
-      easy.textContent = "Mot de passe facile " + tips;
-      easy.style.color = "red";
-    } else {
-      document.getElementById("difficult").innerHTML='';
-      document.getElementById("medium").innerHTML='';
-      document.getElementById("easy").innerHTML='';
-      hardDifficult.textContent = "Mot de passe très difficile. " + tips;
-      hardDifficult.style.color = "green";
-    }
+  var password = document.getElementById("password").value;
+  var easy = document.getElementById("easy");
+  var medium = document.getElementById("medium");
+  var difficult = document.getElementById("difficult");
+  var hardDifficult = document.getElementById("hardDifficult");
+
+  var strength = 0;
+  var tips = "";
+
+  if (password.length < 8) {
+    tips += "Mot de passe pas assez long.";
+  } else {
+    strength += 1;
   }
 
+  if (password.match(/[a-z]/) && password.match(/[A-Z]/)) {
+    strength += 1;
+  } else {
+    tips += "Une majuscule et une minuscule ";
+  }
+
+  if (password.match(/\d/)) {
+    strength += 1;
+  } else {
+    tips += "Au moins un nombre. ";
+  }
+
+  if (password.match(/[^a-zA-Z\d]/)) {
+    strength += 1;
+  } else {
+    tips += "Inclus un charactère spécial. ";
+  }
+
+  if 
+  (strength === 3) {
+    document.getElementById("medium").innerHTML='';
+    document.getElementById("easy").innerHTML='';
+    document.getElementById("hardDifficult").innerHTML='';
+    difficult.textContent = "Mot de passe difficile " + tips;
+    difficult.style.color = "orange";
+} else if 
+(strength === 2) {
+    document.getElementById("easy").innerHTML='';
+    document.getElementById("hardDifficult").innerHTML='';
+    document.getElementById("difficult").innerHTML='';
+    medium.textContent = "Mot de passe moyen. " + tips;
+    medium.style.color = "yellow";
+  } else if (strength < 2) {
+    document.getElementById("hardDifficult").innerHTML='';
+    document.getElementById("difficult").innerHTML='';
+    document.getElementById("medium").innerHTML='';
+    easy.textContent = "Mot de passe facile " + tips;
+    easy.style.color = "red";
+  } else {
+    document.getElementById("difficult").innerHTML='';
+    document.getElementById("medium").innerHTML='';
+    document.getElementById("easy").innerHTML='';
+    hardDifficult.textContent = "Mot de passe très difficile. " + tips;
+    hardDifficult.style.color = "green";
+  }
+}
 
 
 const levelSelect = document.getElementById("levelSelect");
@@ -105,6 +104,9 @@ let flippedCards = 0;
 let backImage = ""; 
 
 function createMemoryGrid(rows, theme) {
+  gridContainer.innerHTML = "";
+  commencerChrono();
+
   const { rows: maxRows, cols: maxCols } = gridSizeOptions[rows];
   const cardWidthPercentage = 100 / maxCols;
   const cardMarginPercentage = 1;
@@ -144,8 +146,6 @@ generateGridButton.addEventListener("click", () => {
   const selectedTheme = themeSelect.value;
   const selectedLevel = parseInt(levelSelect.value, 10); 
   createMemoryGrid(selectedLevel, selectedTheme);
-
-  commencerChrono();
 });
 
 function generateAndShuffleCardList(totalCards) {
@@ -172,7 +172,8 @@ function getBackImage(theme) {
       return "../../assets/dos_pokemon.jpeg";
     case "ClashRoyale":
       return "../../assets/dos_clashRoyale.png";
- 
+    default:
+      return "../../assets/dos_default.png"; 
   }
 }
 
@@ -247,7 +248,7 @@ function checkWin() {
   
   function commencerChrono() {
     if (chrono) {
-      clearInterval(chrono); // Arrête le chrono s'il était déjà en cours
+      clearInterval(chrono); 
     }
     hours = 0;
     minutes = 0;
