@@ -23,7 +23,7 @@ require_once SITE_ROOT . 'partials/head.php';
                 <div class="message">
                     <div class="message-sender2"><?= $result->pseudo ?></div>
                     <div class="message-content2"><?= $result->message ?></div>
-                    <div class="message-statu2">Aujourd'hui à <strong>15h18</strong> vu </div>
+                    <div class="message-statu2"> <?= $result->date_heure_message?></div>
                 </div>
             <?php
             else :
@@ -31,7 +31,7 @@ require_once SITE_ROOT . 'partials/head.php';
                 <div class="message">
                     <div class="message-sender"> <?= $result->pseudo ?></div>
                     <div class="message-content"><?= $result->message ?></div>
-                    <div class="message-statu">Aujourd'hui à <strong>15h16</strong> vu </div>
+                    <div class="message-statu"><?= $result->date_heure_message?></div>
                 </div>
         <?php
             endif;
@@ -43,16 +43,15 @@ require_once SITE_ROOT . 'partials/head.php';
 
     </div>
     <div class="chat-input">
-        <form method="post">
+        <form id="formMessage">
             <input type="text" id="message-input" name="envoie_msg" placeholder="Saisissez votre message...">
             <button id="send-button">Envoyer</button>
-        </from>
-            <?php
-            if (isset($_POST["envoie_msg"])) {
-                $insertionDonnee = $pdo->prepare('INSERT INTO message (id_jeu, id_expediteur, message) 
-            VALUES (:jeu, :expediteur, :message)');
-                $insertionDonnee->execute([':jeu' => 1, ':expediteur' => $_SESSION['userId'], ':message' => $_POST['envoie_msg']]);
-            }
-            ?>
+        </form>
     </div>
 </div>
+<script>
+            var pseudo = '<?= $_SESSION['pseudo'] ?>';
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./styles/script.js">
+</script>
