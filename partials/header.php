@@ -42,7 +42,7 @@
 
                             <?php
                             if (!isset($_SESSION['pseudo'])) {
-                                echo "S\'INSCRIRE";
+                                echo "S'INSCRIRE";
                             } else {
                                 echo '';
                             }
