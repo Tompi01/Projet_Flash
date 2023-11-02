@@ -57,6 +57,7 @@ function scrollChatToBottom() {
 
 
 function passwordCheck() {
+
     var password = document.getElementById("password").value;
     var easy = document.getElementById("easy");
     var medium = document.getElementById("medium");
@@ -119,6 +120,7 @@ function passwordCheck() {
     }
 }
 
+
 const levelSelect = document.getElementById("levelSelect");
 const themeSelect = document.getElementById("themeSelect");
 const generateGridButton = document.getElementById("generateGrid");
@@ -161,6 +163,7 @@ let backImage = "";
 
 function createMemoryGrid(rows, theme) {
   gridContainer.innerHTML = "";
+  commencerChrono();
 
   const { rows: maxRows, cols: maxCols } = gridSizeOptions[rows];
   const cardWidthPercentage = 100 / maxCols;
@@ -271,16 +274,78 @@ function flipCard(img, theme) {
 }
 
 function checkWin() {
-    const cards = document.querySelectorAll(".card-image");
-  
-    for (const card of cards) {
-      if (card.classList.contains("face-down")) {
-        return; 
-      }
+  const cards = document.querySelectorAll(".card-image");
+
+  for (const card of cards) {
+    if (card.classList.contains("face-down")) {
+      return;
     }
+  }
+
+
+  const victoryMessage = document.getElementById("victoryMessage");
+  victoryMessage.style.display = "block";
+
+
   
 
-    alert("Félicitations, vous avez gagné !");
+
+  gameIsFinished = true;
+  clearInterval(chrono);
 }
 
 
+  let gameIsFinished = false;
+
+  let hours = 0;
+  let minutes = 0;
+  let seconds = 0;
+  let ms = 0;
+  let timer;
+  let chrono;
+ 
+  
+  function commencerChrono() {
+    if (chrono) {
+      clearInterval(chrono); 
+    }
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+    chrono = setInterval(actualiserChrono, 100);
+    timer = document.querySelectorAll("#hours, #minutes, #seconds");
+  }
+  
+  
+  function actualiserChrono() {
+    if (gameIsFinished) {
+      clearInterval(chrono);
+      return;
+    }
+  
+    ms += 1;
+    if (ms == 10) {
+      ms = 0;
+      seconds += 1;
+    }
+    if (seconds == 60) {
+      seconds = 0;
+      minutes += 1;
+    }
+    if (minutes == 60) {
+      minutes = 0;
+      hours += 1;
+    }
+  
+    timer[0].innerHTML = hours;
+    timer[1].innerHTML = minutes;
+    timer[2].innerHTML = seconds;
+  }
+  
+  function reinitialiserChrono() {
+    clearInterval(chrono);
+    (seconds = 0), (minutes = 0), (hours = 0);
+    timer[0].innerHTML = hours;
+    timer[1].innerHTML = minutes;
+    timer[2].innerHTML = seconds;
+  }

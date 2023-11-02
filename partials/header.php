@@ -15,7 +15,17 @@
                         <a href="<?= PROJECT_FOLDER ?>index.php" <?php if ($current_page == 'index.php') : ?> style="color:orange;" <?php endif; ?>>ACCUEIL</a>
                     </li>
                     <li>
-                        <a href="<?= PROJECT_FOLDER ?>games/memory/index1.php" <?php if ($current_page == 'index1.php') : ?> style="color:orange;" <?php endif; ?>>JEU</a>
+                        <a href="<?= PROJECT_FOLDER ?>games/memory/index1.php" <?php if ($current_page == 'index1.php') : ?> style="color:orange;" <?php endif; ?>>
+                        
+                            <?php
+                            if (!isset($_SESSION['pseudo'])) {
+                                echo "";
+                            } else {
+                                echo 'JEU';
+                            }
+                            ?>
+                            </a>
+                            
                     </li>
                     <li>
                         <a href="<?= PROJECT_FOLDER ?>games/memory/scores.php" <?php if ($current_page == 'scores.php') : ?> style="color:orange;" <?php endif; ?>>SCORES</a>

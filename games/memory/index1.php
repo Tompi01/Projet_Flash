@@ -33,9 +33,27 @@ require_once SITE_ROOT. 'partials/header.php';
             <option value="Pokemon">Thème Pokemon</option>
             <option value="ClashRoyale">Thème ClashRoyale</option>
           </select>
-          <button id="generateGrid">Générer la grille/Lancer la Partie</button>
+
+
+
+
+
+
         </div>
+     <br><br><button id="generateGrid">Jouer !</button>
+        <div id="victoryMessage" style="display: none;">
+            <br> <br><h1>Félicitations, vous avez gagné !</h1>
+          </div>
       </div>
+
+      <div id="timeDisplay">
+        <span>Temps : </span>
+        <span id="hours">0</span> h
+        <span id="minutes">0</span> min
+        <span id="seconds">0</span> s
+      </div>
+
+
 
       <div class="grid-container">
 
