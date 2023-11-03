@@ -14,7 +14,8 @@ if (!isset($_GET['filtre'])) {
         INNER JOIN jeu 
         ON score.id_jeu = jeu.id 
         INNER JOIN utilisateur 
-        ON score.id_joueur = utilisateur.id "); //
+        ON score.id_joueur = utilisateur.id 
+        ORDER BY score.game_time ASC , score.difficulte ASC"); //
     $getScoreFromSQL->execute(); // 
     $scores = $getScoreFromSQL->fetchAll();
 } else {
