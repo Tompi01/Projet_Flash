@@ -9,7 +9,7 @@ require_once SITE_ROOT . 'utils/database.php';
 if (!isset($_GET['filtre'])) {
     $_GET['filtre'] = '';
     $pdo = connectToDbAndGetPdo();
-    $getScoreFromSQL = $pdo->prepare("SELECT jeu.nom_jeu, utilisateur.pseudo, score.difficulte, score.score_jeu, score.date_heure_partie, game_time
+    $getScoreFromSQL = $pdo->prepare("SELECT jeu.nom_jeu, utilisateur.pseudo, score.difficulte, score.date_heure_partie, game_time
         FROM score
         INNER JOIN jeu 
         ON score.id_jeu = jeu.id 
@@ -19,7 +19,7 @@ if (!isset($_GET['filtre'])) {
     $scores = $getScoreFromSQL->fetchAll();
 } else {
     $pdo = connectToDbAndGetPdo();
-    $getScoreFromSQL = $pdo->prepare("SELECT jeu.nom_jeu, utilisateur.pseudo, score.difficulte, score.score_jeu, game_time, score.date_heure_partie
+    $getScoreFromSQL = $pdo->prepare("SELECT jeu.nom_jeu, utilisateur.pseudo, score.difficulte, game_time, score.date_heure_partie
         FROM score
         INNER JOIN jeu 
         ON score.id_jeu = jeu.id 
@@ -56,7 +56,6 @@ if (!isset($_GET['filtre'])) {
                         <th>Jeu</th>
                         <th>Pseudo</th>
                         <th>Difficulté</th>
-                        <th>Score</th>
                         <th>Temps_en_jeu</th>
                         <th>Date_Partie</th>
                     </tr>
@@ -68,7 +67,6 @@ if (!isset($_GET['filtre'])) {
                         <td><?php echo $scores[$i]->nom_jeu ?> </td>
                         <td><?php echo $scores[$i]->pseudo ?> </td>
                         <td><?php echo $scores[$i]->difficulte ?> </td>
-                        <td><?php echo $scores[$i]->score_jeu ?> </td>
                         <td><?php echo $scores[$i]->game_time ?> </td>
                         <td><?php echo $scores[$i]->date_heure_partie ?> </td>
                     </tr>
