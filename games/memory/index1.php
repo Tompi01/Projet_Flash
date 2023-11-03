@@ -5,6 +5,8 @@
 require_once '../../utils/common.php';
 require_once SITE_ROOT. 'partials/head.php';
 require_once SITE_ROOT. 'partials/header.php';
+
+
 ?>
 
 <section class="theme">
@@ -23,9 +25,9 @@ require_once SITE_ROOT. 'partials/header.php';
         <div id="themeClassique">
           <span>Sélectionnez le niveau :</span>
           <select id="levelSelect">
-            <option value="4">4x4</option>
-            <option value="8">8x8</option>
-            <option value="12">12x12</option>
+            <option value="Level I">4x4</option>
+            <option value="Level II">8x8</option>
+            <option value="Level III">12x12</option>
           </select>
           <span>Sélectionnez le thème :</span>
           <select id="themeSelect">
@@ -43,6 +45,30 @@ require_once SITE_ROOT. 'partials/header.php';
      <br><br><button id="generateGrid">Jouer !</button>
         <div id="victoryMessage" style="display: none;">
             <br> <br><h1>Félicitations, vous avez gagné !</h1>
+
+   <br/>
+  </div>
+</div>
+
+             <div>
+        <?php
+        require_once '../../utils/database.php';
+if (isset($_POST['seconds'])) {
+  $hours = $_POST['hours'];
+  $minutes = $_POST['minutes'];
+  $seconds = $_POST['seconds'];
+  $level = $_POST['level'];
+
+
+  $pdo = connectToDbAndGetPdo();
+  $pdoStatement = $pdo->prepare("INSERT INTO score
+                                  (id_joueur, id_jeu, difficulte, game_time)
+                                 VALUES ('$_SESSION[userId]',1 ,'$level','$hours:$minutes:$seconds')");
+  $pdoStatement->execute();
+}
+?>
+
+
           </div>
       </div>
 
