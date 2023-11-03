@@ -51,8 +51,11 @@ $nbJoueur = $pdoJoueurInscrit->fetch();
                 <span class="challenger-text">Venez challenger les cerveaux les plus agiles !</span>
 
                 <br> <br>
-
+                <?php if(isset($_SESSION['userId'])){
+                    ?>
                 <a class="jouer-text" href="<?= PROJECT_FOLDER ?>games/memory/index1.php">Jouer !</a>
+                <?php 
+                } ?>
             </div>
         </div>
 
