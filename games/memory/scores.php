@@ -15,7 +15,7 @@ if (!isset($_GET['filtre'])) {
         ON score.id_jeu = jeu.id 
         INNER JOIN utilisateur 
         ON score.id_joueur = utilisateur.id 
-        ORDER BY score.game_time ASC , score.difficulte ASC"); //
+        ORDER BY score.game_time ASC , score.difficulte ASC"); 
     $getScoreFromSQL->execute(); // 
     $scores = $getScoreFromSQL->fetchAll();
 } else {
@@ -26,7 +26,8 @@ if (!isset($_GET['filtre'])) {
         ON score.id_jeu = jeu.id 
         INNER JOIN utilisateur 
         ON score.id_joueur = utilisateur.id 
-        WHERE utilisateur.pseudo like :pseudo "); //
+        WHERE utilisateur.pseudo like :pseudo 
+        ORDER BY score.game_time ASC , score.difficulte ASC"); 
     echo $_GET['filtre'];
     $getScoreFromSQL->execute([':pseudo' => '%'. $_GET['filtre'] .'%']); 
     $scores = $getScoreFromSQL->fetchAll();
