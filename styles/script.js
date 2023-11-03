@@ -113,6 +113,9 @@ function createMemoryGrid(rows, theme) {
 
   backImage = getBackImage(theme);
 
+  const themeBackground = document.querySelector(".theme-background");
+  themeBackground.style.backgroundImage = `url(${getBackgroundImageForTheme(theme)})`;
+
   const cards = generateAndShuffleCardList(maxRows * maxCols);
 
   for (let i = 0; i < maxRows; i++) {
@@ -292,4 +295,17 @@ function checkWin() {
     timer[0].innerHTML = hours;
     timer[1].innerHTML = minutes;
     timer[2].innerHTML = seconds;
+  }
+
+  function getBackgroundImageForTheme(theme) {
+    switch (theme) {
+      case "Default":
+        return "../../assets/fond_default.webp";
+      case "Pokemon":
+        return "../../assets/fond_pokemon.jpg"; 
+      case "ClashRoyale":
+        return "../../assets/fond_clashRoyale.jpg"; 
+      default:
+        return "../../assets/fond_default.webp"; 
+    }
   }
