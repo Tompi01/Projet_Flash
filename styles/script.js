@@ -62,7 +62,6 @@ function passwordCheck() {
   }
 }
 
-
 const levelSelect = document.getElementById("levelSelect");
 const themeSelect = document.getElementById("themeSelect");
 const generateGridButton = document.getElementById("generateGrid");
@@ -113,6 +112,9 @@ function createMemoryGrid(rows, theme) {
 
 
   backImage = getBackImage(theme);
+
+  const themeBackground = document.querySelector(".theme-background");
+  themeBackground.style.backgroundImage = `url(${getBackgroundImageForTheme(theme)})`;
 
   const cards = generateAndShuffleCardList(maxRows * maxCols);
 
@@ -193,6 +195,7 @@ function flipCard(img, theme) {
     if (img.classList.contains("face-down")) {
       img.classList.remove("face-down");
       const cardId = img.classList[1];
+      img.style.animation = "flip 0.5s"; // Ajoutez cette ligne pour déclencher l'animation
       img.src = `../../assets/Carte/${cardFaces[theme][cardId]}`;
 
       if (firstCard === null) {
@@ -200,31 +203,34 @@ function flipCard(img, theme) {
       } else {
         secondCard = img;
         canFlip = false;
-        flippedCards = 2; 
+        flippedCards = 2;
 
         if (firstCard.src === secondCard.src) {
           pairsFound++;
           firstCard = null;
           secondCard = null;
           canFlip = true;
-          flippedCards = 0; 
-          checkWin(); 
+          flippedCards = 0;
+          checkWin();
         } else {
           setTimeout(() => {
             firstCard.classList.add("face-down");
             secondCard.classList.add("face-down");
+            firstCard.style.animation = "none"; // Arrêtez l'animation
+            secondCard.style.animation = "none"; // Arrêtez l'animation
             firstCard.src = backImage;
             secondCard.src = backImage;
             firstCard = null;
             secondCard = null;
-            canFlip = true; 
-            flippedCards = 0; 
-          }, 1000); 
+            canFlip = true;
+            flippedCards = 0;
+          }, 1000);
         }
       }
     }
   }
 }
+
 
 function checkWin() {
   const cards = document.querySelectorAll(".card-image");
@@ -259,7 +265,7 @@ function checkWin() {
   
   function commencerChrono() {
     if (chrono) {
-      clearInterval(chrono); 
+      clearInterval(chrono); // Arrête le chrono s'il était déjà en cours
     }
     hours = 0;
     minutes = 0;
@@ -301,6 +307,7 @@ function checkWin() {
     timer[1].innerHTML = minutes;
     timer[2].innerHTML = seconds;
   }
+
   function send_data(){
     var hours = document.getElementById('hours').innerText;
     var minutes = document.getElementById('minutes').innerText;
@@ -345,3 +352,18 @@ window.addEventListener('beforeunload', function (e) {
     e.returnValue = '';
   }
 });
+
+
+  function getBackgroundImageForTheme(theme) {
+    switch (theme) {
+      case "Default":
+        return "../../assets/fond_default.webp";
+      case "Pokemon":
+        return "../../assets/fond_pokemon.jpg"; 
+      case "ClashRoyale":
+        return "../../assets/fond_clashRoyale.jpg"; 
+      default:
+        return "../../assets/fond_default.webp"; 
+    }
+  }
+

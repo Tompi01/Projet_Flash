@@ -21,6 +21,8 @@ require_once SITE_ROOT. 'partials/header.php';
 
       <!-------------------------------------------FIN BANNER---------------------------------------------------->
 
+
+<div id="background-theme" class="theme-background">
       <div id="themeCarte">
         <div id="themeClassique">
           <span>Sélectionnez le niveau :</span>
@@ -44,6 +46,7 @@ require_once SITE_ROOT. 'partials/header.php';
         </div>
      <br><br><button id="generateGrid">Jouer !</button>
         <div id="victoryMessage" style="display: none;">
+          
             <br> <br><h1>Félicitations, vous avez gagné !</h1>
 
    <br/>
@@ -86,6 +89,8 @@ if (isset($_POST['seconds'])) {
       <table id="memoryGrid"></table> 
 
       </div>
+
+</div>
 
 
 

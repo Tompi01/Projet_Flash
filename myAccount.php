@@ -75,8 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <form method="post">
                     <h2>Changer d'Email</h2>
 
-
-
                     <?php
 
                     $oldEmailError = $emailError = $passwordError = '';
