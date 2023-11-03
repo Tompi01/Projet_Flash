@@ -73,7 +73,7 @@ if (isset($_POST['seconds'])) {
 
 
           </div>
-      </div>
+
 
       <div id="timeDisplay">
         <span>Temps : </span>
@@ -90,6 +90,7 @@ if (isset($_POST['seconds'])) {
 
       </div>
 
+</div>
 </div>
 
 
