@@ -146,8 +146,19 @@ function createMemoryGrid(rows, theme) {
 
 generateGridButton.addEventListener("click", () => {
   const selectedTheme = themeSelect.value;
-  const selectedLevel = parseInt(levelSelect.value, 10); 
-  createMemoryGrid(selectedLevel, selectedTheme);
+  const selectedLevel = levelSelect.value; 
+let level = 0;
+if (selectedLevel==='Level I'){
+  level = 4;
+
+} else if (selectedLevel==='Level II'){
+  level = 8;
+}
+else {
+  level = 12;
+}
+
+  createMemoryGrid(level, selectedTheme);
 });
 
 function generateAndShuffleCardList(totalCards) {
@@ -235,7 +246,7 @@ function checkWin() {
   victoryMessage.style.display = "block";
 
 
-  
+  send_data();
 
   gameIsFinished = true;
   clearInterval(chrono);
@@ -297,6 +308,52 @@ function checkWin() {
     timer[2].innerHTML = seconds;
   }
 
+  function send_data(){
+    var hours = document.getElementById('hours').innerText;
+    var minutes = document.getElementById('minutes').innerText;
+    var seconds = document.getElementById('seconds').innerText;
+    var level = document.getElementById('levelSelect').value;
+   
+      const formData = new FormData();
+
+      formData.append("hours",hours);
+      formData.append("minutes",minutes);
+      formData.append("seconds",seconds);
+      formData.append("level",level);
+      const request = new XMLHttpRequest();
+      request.open('POST',"../../games/memory/index1.php");
+      request.send(formData);
+    }
+
+    document.getElementById('modal').style.display = 'block'
+    window.addEventListener('scroll', function(e) {
+      setTimeout( () => {
+        document.getElementById('modal').style.display = 'block'
+      }, 2000 )
+    });
+    let modalAlreadyShowed = false
+
+window.addEventListener('scroll', function(e) {
+  if( ! modalAlreadyShowed ) {
+    setTimeout( () => {
+      document.getElementById('modal').style.display = 'block'
+    }, 2000 )
+    modalAlreadyShowed = true
+  }
+});
+document.getElementById('modal-close').addEventListener('click', function(e) {
+  document.getElementById('modal').style.display = 'none'
+  location.reload
+})
+
+window.addEventListener('beforeunload', function (e) {
+  if( confirmExiting ) {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
+
+
   function getBackgroundImageForTheme(theme) {
     switch (theme) {
       case "Default":
@@ -309,3 +366,4 @@ function checkWin() {
         return "../../assets/fond_default.webp"; 
     }
   }
+
